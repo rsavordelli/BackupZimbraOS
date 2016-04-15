@@ -38,7 +38,7 @@ mkdir -p $ZDUMPDIR
 fi
 
 echo "backup $backupold removido" >> /var/log/backup.debug
-
+mkdir -p $ZDUMPDIR/ldap-backup/{main_database,config_database,accesslog_db}
 # Gerando lista de contas para o backup.
 echo " Gerando lista ... "
      for mbox in `/opt/zimbra/bin/zmprov -l gaa`
