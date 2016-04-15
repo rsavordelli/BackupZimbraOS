@@ -55,7 +55,6 @@ echo "=================================================" >> $debug
 done
 
 echo "iniciando backup da base ldap"
-mkdir -p $ZDUMPDIR/ldap-backup/{main_database,config_database,accesslog_db}
 
  /opt/zimbra/libexec/zmslapcat $ZDUMPDIR/ldap-backup/main_database
  /opt/zimbra/libexec/zmslapcat -c $ZDUMPDIR/ldap-backup/config_database
