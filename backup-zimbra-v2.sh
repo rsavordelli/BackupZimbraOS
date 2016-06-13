@@ -46,7 +46,7 @@ do
 echo "  Gerando backup da conta $mbox ..."
 echo "Usuário $mbox" >> $debug
 
-#Exportando contas com ZMprov e checando integridade. Caso a saida do comando seja um erro, envia um e-mail para a conta $admin
+#Exportando contas com ZMprov e checando integridade. Caso a saida do commando seja um erro, envia um e-mail para a conta $admin
 echo "inicio backup `date` $mbox " >> $debug
 echo "=================================================" >> $debug
 $ZMBOX -z -m $mbox getRestURL "//?fmt=tgz" > $ZDUMPDIR/$mbox.tgz && echo "Backup da conta $mbox OK " || (echo "Subject: FALHA NO BACKUP DO ZIMBRA ";echo "Falhou") | /opt/zimbra/postfix/sbin/sendmail  $admin
